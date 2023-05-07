@@ -1,6 +1,6 @@
 import {gql} from "@apollo/client";
 
-export const toDoGetList = gql`
+export const toDoGetList = gql(`
 query ToDoGetList{
   toDoQuery {
     toDoGetList {
@@ -17,9 +17,9 @@ query ToDoGetList{
     }
   }
 }
-`
+`)
 
-export const toDoCreate = gql`
+export const toDoCreate = gql(`
 mutation ToDoCreate($toDo: ToDoInput){
   toDoMutation {
     toDoCreate(toDo: $toDo) {
@@ -36,9 +36,9 @@ mutation ToDoCreate($toDo: ToDoInput){
     }
   }
 }
-`
+`)
 
-export const toDoUpdate = gql`
+export const toDoUpdate = gql(`
 mutation ToDoUpdate($toDo: ToDoInput){
   toDoMutation {
     toDoUpdate(toDo: $toDo) {
@@ -55,12 +55,12 @@ mutation ToDoUpdate($toDo: ToDoInput){
     }
   }
 }
-`
+`)
 
-export const toDoDelete = gql`
+export const toDoDelete = gql(`
 mutation ToDoDelete($id: ID){
   toDoMutation {
     toDoDelete(id: $id)
   }
 }
-`
+`)
